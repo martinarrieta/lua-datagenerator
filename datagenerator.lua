@@ -78,3 +78,9 @@ end
 function DataGenerator:get_letters()
   return self:get_data(LETTERS)
 end
+
+function DataGenerator:get_email()
+  local val = self:get_data(LETTERS)
+  local at_char = math.floor(math.random(20, 30)*string.len(val)/100)
+  return string.sub(val,at_char * -1) .. "@" .. string.sub(val,at_char + 1, string.len(val) - 4) .. ".com"
+end

@@ -12,3 +12,6 @@ print(r:get_numbers())
 
 -- Request a string with only letters
 print(r:get_letters())
+
+-- Request a string with email format
+print(r:get_email())
