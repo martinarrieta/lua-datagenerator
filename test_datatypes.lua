@@ -40,6 +40,15 @@ TestDataGenerator = {} --class
     luaunit.assertEquals( string.match(string1, "%d"), nil )
   end
 
+  function TestDataGenerator:testEmail()
+    max_length = 30
+    min_length = nil
+
+    r = DataGenerator.new{ max_length=max_length, min_length=min_length}
+    string1 = r:get_email()
+    luaunit.assertEquals( string.match(string1, "[A-Za-z0-9]+@[A-Za-z0-9]+%.[A-Za-z0-9]+"), string1 )
+  end
+
 -- class TestDataGenerator
 
 os.exit( luaunit.LuaUnit.run() )
