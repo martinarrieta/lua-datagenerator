@@ -19,6 +19,12 @@ print(r:get_numbers())
 
 -- Request a string with only letters
 print(r:get_letters())
+
+-- Request a string with only letters
+print(r:get_letters())
+
+-- Request a string with email format
+print(r:get_email())
 ```
 
 
@@ -27,13 +33,14 @@ print(r:get_letters())
 The test library that I have used for this was luaunit, here is an example about how to run the tests and what should be the output.
 
 ```
-# lua5.3 test_datatypes.lua -v
-Started on Thu Jan  5 09:56:43 2017
+lua5.3 test_datatypes.lua -v
+Started on Mon Jan  9 13:55:17 2017
+    TestDataGenerator.testEmail ... Ok
     TestDataGenerator.testLetters ... Ok
     TestDataGenerator.testNumbers ... Ok
     TestDataGenerator.testWithStrings ... Ok
     TestDataGenerator.testWithoutMinLength ... Ok
 =========================================================
-Ran 4 tests in 0.000 seconds, 4 successes, 0 failures
+Ran 5 tests in 0.001 seconds, 5 successes, 0 failures
 OK
 ```
