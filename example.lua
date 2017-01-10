@@ -2,7 +2,7 @@
 require "datagenerator"
 
 -- Create the class and set max_length and min_length (which is optional)
-r = DataGenerator.new{ max_length=30, min_length=10}
+r = DataGenerator.new{ max_length=30, min_length=10, null_percent=0}
 
 -- Request an alphanumeric string
 print(r:get_string())
